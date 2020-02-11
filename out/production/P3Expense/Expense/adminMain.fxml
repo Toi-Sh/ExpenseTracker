@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Expense.AdminController">
+  <panes>
+    <TitledPane animated="false" style="-fx-background-color: ffff;" text="Accounts">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: ffff;">
+               <children>
+                  <Text layoutX="33.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+                  <Text layoutX="32.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName" />
+                  <Text layoutX="32.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+                  <Text layoutX="32.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance" />
+                  <Button fx:id="btnPrev" layoutX="27.0" layoutY="221.0" mnemonicParsing="false" onAction="#prevUserClicked" text="Previous" />
+                  <Button fx:id="btnNext" layoutX="246.0" layoutY="221.0" mnemonicParsing="false" onAction="#nextUserClicked" text="Next" />
+                  <Text fx:id="txtID" layoutX="256.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="txtAUserName" layoutX="256.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="txtAPassword" layoutX="256.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="txtABalance" layoutX="256.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <ImageView fitHeight="270.0" fitWidth="235.0" layoutX="342.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" text="Update/Delete Accounts">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: ffff;">
+               <children>
+                  <TextField fx:id="tfID" layoutX="206.0" layoutY="28.0" />
+                  <Text layoutX="14.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the ID of the Account" />
+                  <Text layoutX="29.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name" />
+                  <Text layoutX="29.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name" />
+                  <Text layoutX="28.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+                  <Text layoutX="28.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance" />
+                  <TextField fx:id="tfAUserName" layoutX="206.0" layoutY="131.0" onAction="#displayBtnClicked" />
+                  <TextField fx:id="tfAPassword" layoutX="206.0" layoutY="177.0" onAction="#displayBtnClicked" />
+                  <TextField fx:id="tfABalance" layoutX="206.0" layoutY="217.0" onAction="#displayBtnClicked" />
+                  <Button fx:id="btnUpdate" layoutX="299.0" layoutY="277.0" mnemonicParsing="false" onAction="#updateBtnClicked" text="Update" />
+                  <Button fx:id="btnDelete" layoutX="28.0" layoutY="277.0" mnemonicParsing="false" onAction="#deleteBtnClicked" text="Delete" />
+                  <ImageView fitHeight="233.0" fitWidth="200.0" layoutX="384.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextField fx:id="tfAFullName" layoutX="206.0" layoutY="92.0" onAction="#displayBtnClicked" />
+                  <Button fx:id="btnDisplay" layoutX="308.0" layoutY="55.0" mnemonicParsing="false" onAction="#displayBtnClicked" prefHeight="27.0" prefWidth="65.0" style="-fx-background-color: ffff;" text="Display" underline="true" />
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" text="All Accounts">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: ffff;">
+               <children>
+                  <TableView fx:id="tblView" layoutX="14.0" layoutY="14.0" prefHeight="291.0" prefWidth="576.0">
+                    <columns>
+                      <TableColumn fx:id="colID" minWidth="6.0" prefWidth="6.0" text="ID" />
+                      <TableColumn fx:id="colUserName" prefWidth="304.0" text="UserName" />
+                        <TableColumn fx:id="colPassword" prefWidth="132.0" text="Password" />
+                        <TableColumn fx:id="colBalance" prefWidth="133.0" text="Balance" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+  </panes>
+</Accordion>

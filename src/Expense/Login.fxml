@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="402.0" prefWidth="349.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Expense.Controller">
+   <children>
+      <RadioButton fx:id="rdoUser" layoutX="91.0" layoutY="94.0" mnemonicParsing="false" text="User">
+         <toggleGroup>
+            <ToggleGroup fx:id="User" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdoAdmin" layoutX="186.0" layoutY="94.0" mnemonicParsing="false" text="Admin" toggleGroup="$User" />
+      <TextField fx:id="tfUserName" layoutX="91.0" layoutY="139.0" promptText="username" />
+      <PasswordField fx:id="tfPassword" layoutX="91.0" layoutY="216.0" promptText="password" />
+      <Button fx:id="btnSignIn" layoutX="145.0" layoutY="286.0" mnemonicParsing="false" onAction="#btnLogInActionHandler" text="Sign In" underline="true" />
+      <Button fx:id="btnCreate" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnLogInActionHandler" text="Create account" underline="true" />
+      <Text fill="WHITE" layoutX="111.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expense Tracker" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font></Text>
+      <Text layoutX="158.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>

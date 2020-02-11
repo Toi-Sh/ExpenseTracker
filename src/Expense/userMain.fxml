@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="468.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Expense.UserMain">
+  <panes>
+    <TitledPane animated="false" text="Track Spending">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="24.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Amount Spent:" />
+                  <TextField fx:id="tfSpent" layoutX="161.0" layoutY="38.0" prefHeight="27.0" prefWidth="138.0" />
+                  <Button fx:id="btnClear" layoutX="35.0" layoutY="215.0" mnemonicParsing="false" onAction="#ClearBtnClicked" text="Clear" />
+                  <Button fx:id="btnSubmitSpend" layoutX="219.0" layoutY="215.0" mnemonicParsing="false" onAction="#SubmitBtnClicked" text="Submit" />
+                  <Text layoutX="21.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Balance: " />
+                  <Text fx:id="txtBal" layoutX="158.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.2060546875" />
+                  <ImageView fitHeight="240.0" fitWidth="134.0" layoutX="320.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" text="Track Deposit">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Amount to Deposit:" />
+                  <TextField fx:id="tfDeposit" layoutX="179.0" layoutY="28.0" prefHeight="27.0" prefWidth="135.0" />
+                  <Button fx:id="btnCLear2" layoutX="28.0" layoutY="236.0" mnemonicParsing="false" onAction="#ClearBtnClicked" text="Clear" />
+                  <Button fx:id="btnSubmitDeposit" layoutX="228.0" layoutY="236.0" mnemonicParsing="false" onAction="#SubmitBtnClicked" text="Submit" />
+                  <Text layoutX="14.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Balance:" />
+                  <Text fx:id="txtBal2" layoutX="165.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0" />
+                  <ImageView fitHeight="216.0" fitWidth="118.0" layoutX="333.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+      <TitledPane animated="false" text="All Transactions">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <PieChart fx:id="BalPie" layoutX="40.0" layoutY="22.0" prefHeight="274.0" prefWidth="387.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+  </panes>
+</Accordion>
